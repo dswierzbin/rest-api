@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:rest-api
+    driver-class-name: org.h2.Driver
+    username: rest
+    password: rest
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+logging:
+  level:
+    root: warn
+    org:
+      springframework:
+        web: debug
+      hibernate: error
+    pl:
+      swierzbin:
+        rest:
+          api:
+            service: debug
+
+rest:
+  api:
+    url: https://api.github.com
